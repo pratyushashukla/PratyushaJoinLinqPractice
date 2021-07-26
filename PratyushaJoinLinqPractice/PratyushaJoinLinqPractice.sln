@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PratyushaJoinLinqPractice", "PratyushaJoinLinqPractice\PratyushaJoinLinqPractice.csproj", "{407661CF-8DEB-4221-A375-484C5537C46C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{407661CF-8DEB-4221-A375-484C5537C46C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{407661CF-8DEB-4221-A375-484C5537C46C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{407661CF-8DEB-4221-A375-484C5537C46C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{407661CF-8DEB-4221-A375-484C5537C46C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B02E144C-8A15-4788-888B-616F547C8F0D}
+	EndGlobalSection
+EndGlobal
