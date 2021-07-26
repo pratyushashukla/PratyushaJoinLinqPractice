@@ -98,26 +98,26 @@ namespace PratyushaJoinLinqPractice
                 Console.WriteLine($"Student Age : {Query1.age}" + "   "+ $"Student Name : {Query1.StudentName}"+ "   "+ $"Student Std : {Query1.std}" + "   "+ $"Teacher ID : {Query1.teacherID}");
 
             }
-            var Query3 = (from bk in booksDict.Values
-                          join td in teacherDict.Values
-                          on bk.teacherId equals td.teacherID
-                          where bk.teacherId == 1006
-                          orderby bk.std descending
-                          select new
-                          {
-                              td.teacherID,
-                              bk.bookId,
-                              bk.std
-                          }
+            //var Query3 = (from bk in booksDict.Values
+            //              join td in teacherDict.Values
+            //              on bk.teacherId equals td.teacherID
+            //              where bk.teacherId == 1006
+            //              orderby bk.std descending
+            //              select new
+            //              {
+            //                  td.teacherID,
+            //                  bk.bookId,
+            //                  bk.std
+            //              }
 
-               ).ToList();
+            //   ).ToList();
           
 
-            foreach (var Q in Query3)
-            {
-                Console.WriteLine($"TID  : {Q.teacherID}" + "   " + $" Book id : {Q.bookId}" + "   " + $" Std : {Q.std}");
+            //foreach (var Q in Query3)
+            //{
+            //    Console.WriteLine($"TID  : {Q.teacherID}" + "   " + $" Book id : {Q.bookId}" + "   " + $" Std : {Q.std}");
 
-            }
+            //}
 
 
 
