@@ -98,6 +98,7 @@ namespace PratyushaJoinLinqPractice
                 Console.WriteLine($"Student Age : {Query1.age}" + "   "+ $"Student Name : {Query1.StudentName}"+ "   "+ $"Student Std : {Query1.std}" + "   "+ $"Teacher ID : {Query1.teacherID}");
 
             }
+            Console.WriteLine();
             //var Query3 = (from bk in booksDict.Values
             //              join td in teacherDict.Values
             //              on bk.teacherId equals td.teacherID
