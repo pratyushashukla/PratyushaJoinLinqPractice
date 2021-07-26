@@ -22,6 +22,8 @@ namespace PratyushaJoinLinqPractice
             Console.WriteLine(TimeSpan.FromMinutes(1).TotalSeconds);
 
             DateTime dt = DateTime.Now;
+
+            DateTime newObj = new DateTime();
             
 
                 //var p = long.Parse(TimeSpan.FromMilliseconds(360000));
