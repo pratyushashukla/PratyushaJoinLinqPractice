@@ -22,7 +22,7 @@ namespace PratyushaJoinLinqPractice
             Console.WriteLine(TimeSpan.FromMinutes(1).TotalSeconds);
 
             DateTime dt = DateTime.Now;
-
+            Console.WriteLine(dt);
             DateTime newObj = new DateTime();
             
 
@@ -92,14 +92,31 @@ namespace PratyushaJoinLinqPractice
                          }
                          ).ToList();
 
+            var Query3 = (from bk in booksDict.Values
+                          join td in teacherDict.Values
+                          on bk.teacherId equals td.teacherID
+                          where bk.teacherId == 1006
+                          select new
+                          {
+                              td.teacherID,
+                              bk.bookId,
+                              td.std
+                          }
 
+                ).ToList();
             foreach (var Query1 in Query2)
             {
                 Console.WriteLine($"Student Age : {Query1.age}" + "   "+ $"Student Name : {Query1.StudentName}"+ "   "+ $"Student Std : {Query1.std}" + "   "+ $"Teacher ID : {Query1.teacherID}");
 
             }
 
-            
+            foreach (var Q in Query3)
+            {
+                Console.WriteLine($"TID  : {Q.teacherID}" + "   " + $" Book id : {Q.bookId}" + "   " + $" Std : {Q.std}");
+
+            }
+
+
 
         }
     }
