@@ -59,7 +59,7 @@ namespace PratyushaJoinLinqPractice
             teacher t3 = new teacher() { teacherID = 1003, std = 17 };
             teacher t4 = new teacher() { teacherID = 1004, std = 19 };
             teacher t5= new teacher() { teacherID = 1005, std = 5 };
-            teacher t6= new teacher() { teacherID = 1006, std = 13 };
+            teacher t6= new teacher() { teacherID = 1006, std = 9 };
             teacher t7 = new teacher() { teacherID = 1071, std = 12};
             teacher t8 = new teacher() { teacherID = 1008, std = 12 };
             teacher t9 = new teacher() { teacherID = 1009, std = 11 };
@@ -68,7 +68,7 @@ namespace PratyushaJoinLinqPractice
             teacherDict.TryAdd(t6.teacherID, t6); teacherDict.TryAdd(t7.teacherID, t7); teacherDict.TryAdd(t8.teacherID, t8); teacherDict.TryAdd(t9.teacherID, t9);
 
             books b1 = new books() { bookId = 10, std = 12, teacherId = 1008 };
-            books b2 = new books() { bookId = 11, std = 13, teacherId = 1006 };
+            books b2 = new books() { bookId = 11, std = 8, teacherId = 1006 };
             books b3 = new books() { bookId = 12, std = 5, teacherId = 1005 };
             books b4 = new books() { bookId = 13, std = 13, teacherId = 1006 };
             books b5 = new books() { bookId = 14, std = 11, teacherId = 1009 };
@@ -96,11 +96,12 @@ namespace PratyushaJoinLinqPractice
                           join td in teacherDict.Values
                           on bk.teacherId equals td.teacherID
                           where bk.teacherId == 1006
+                          orderby bk.std descending
                           select new
                           {
                               td.teacherID,
                               bk.bookId,
-                              td.std
+                              bk.std
                           }
 
                 ).ToList();
